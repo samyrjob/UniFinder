@@ -6,15 +6,16 @@ $alreadyUsed = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['login'])) {
+        
         // login logic
-        $username = trim($_POST['username']);
+        $username = trim($_POST['username']); // get the username
         $password = $_POST['password'];   // get the password
 
         if (!empty($username) && !empty($password)) {
             try {
-                $pdo = getPDO(); // Use the centralized DB connection
+                $pdo = getPDO(); // Use the centralised DB connection
         
-                // Check if user exists
+                // Check if user exists in the DB
                 $stmt = $pdo->prepare("SELECT user_id, username, password FROM users WHERE username = ?");
                 $stmt->execute([$username]);
                 $user = $stmt->fetch();
@@ -40,17 +41,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
     }  elseif (isset($_POST['sign_up']) && !empty($_POST['create_user'])) {
+        
+        
         // sign up logic
         
-        $new_username = trim($_POST['create_user']);
+        $new_username = trim($_POST['create_user']); // get the new username
         $password = $_POST['password']; // Get the password
         $alreadyUsed = '';
         
         if (!empty($new_username) && !empty($password)) {
             try {
-                $pdo = getPDO(); // Use centralized DB connection
+                $pdo = getPDO(); // Use centralised DB connection
         
-                // Check if username already exists
+                // Check if username already exists in the DB
                 $stmt = $pdo->prepare("SELECT user_id FROM users WHERE username = ?");
                 $stmt->execute([$new_username]);
                 $existing = $stmt->fetch();

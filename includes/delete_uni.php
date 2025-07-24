@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_university']) 
         if ($uni) {
             $stmt = $pdo->prepare("DELETE FROM user_unis WHERE user_id = ? AND uni_id = ?");
             $stmt->execute([$user_id, $uni['uni_id']]);
-            $saveUni = "'$uni_name' removed from list.";
+            $saveUni = "'$uni_name' removed from the list.";
         }
     } catch (PDOException $e) {
         $saveUni = "Error: " . $e->getMessage();

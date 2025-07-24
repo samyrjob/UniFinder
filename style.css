@@ -1,0 +1,267 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e9ecf1;
+    color: #2d2d2d;
+    line-height: 1.6;
+}
+
+/* Main container between login and sign up section */
+.login_or_signUp {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    background-color: #f2f4f7;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Card containers for login and signup sections */
+.login-form-container,
+.signup-form-container {
+    background-color: #ffffff;
+    padding: 20px 24px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Headings and labels */
+.login-form-container label,
+.signup-form-container label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #1a1a1a;
+}
+
+/* Inputs */
+.login-form-container input,
+.signup-form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fcfcfc;
+}
+
+/* Primary buttons */
+.login-form-container button,
+.signup-form-container button,
+.saved_list_button button,
+.button_back_search button {
+    background-color: #0055cc;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+    margin-right: 8px;
+}
+
+.login-form-container button:hover,
+.signup-form-container button:hover,
+.saved_list_button button:hover,
+.button_back_search button:hover {
+    background-color: #0042a5;
+}
+
+/* Cancel button (red) */
+.login-form-container form button[name="cancel_proposed"] {
+    background-color: #cc0033;
+}
+
+.login-form-container form button[name="cancel_proposed"]:hover {
+    background-color: #a90029;
+}
+
+/* Messages */
+.login-form-container p,
+.signup-form-container p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #444;
+}
+
+.login-form-container p[style],
+.signup-form-container p[style] {
+    color: #cc0000 !important;
+    font-weight: bold;
+}
+
+/* Logged-in info */
+.login-form-container p strong {
+    color: #007a00;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+/* INPUT FIELDS */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fdfdfd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #0055cc;
+    outline: none;
+}
+
+/*Apply green to save button*/
+
+
+.save-btn {
+    background-color: #006400;  /* Dark green for better contrast */
+    color: white;  /* White text for good contrast */
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 6px;
+}
+
+.save-btn:hover {
+    background-color: #004d00;  /* Darker green on hover */
+}
+
+.save-btn:active {
+    transform: scale(0.97);
+}
+
+/*save btn logged out*/
+
+.save-btn-logged-out button{
+    background-color:  #006400;  /* Dark green for better contrast */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.save-btn-logged-out button:hover {
+    background-color: #0041a8;
+}
+
+.save-btn-logged-out button:active {
+    transform: scale(0.97);
+}
+
+
+
+/*delete button in red:*/
+
+.delete-btn {
+    background-color:  #8B0000; /* Dark red */; 
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #a90029;
+}
+
+.delete-btn:active {
+    transform: scale(0.97);
+}
+
+/*Apply the same style for the logout button*/
+
+
+.btn-logout button {
+    background-color: #cc0033;  
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 6px;
+}
+
+.btn-logout button:hover {
+    background-color: #a90029;
+}
+
+.btn-logout button:active {
+    transform: scale(0.97);
+}
+
+
+
+
+
+button {
+    background-color: #0055cc;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #003f99;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+a button {
+    text-decoration: none;
+}
+
+form button {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+
